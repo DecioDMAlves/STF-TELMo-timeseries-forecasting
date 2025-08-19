@@ -16,12 +16,7 @@ This repository contains an anonymized, runnable example split across two main s
 ├─ requirements.txt
 ├─ Model.py                 # training pipeline (anonymized)
 ├─ Generate_Forecasts.py    # prediction-only script (stand-alone)
-├─ synthetic_data.py        # optional: small synthetic data generator for demo
-├─ utils.py                 # shared helpers (create_sequences, save csv, etc.)
-└─ artifacts/               # produced after running Model.py
-   ├─ model.h5
-   ├─ scaler_features.pkl
-   └─ scaler_targets.pkl
+
 ```
 
 ---
@@ -47,19 +42,6 @@ numpy
 joblib
 ```
 
----
-
-### 2. (Optional) Generate synthetic data for a runnable demo
-
-If you want to try the examples without private data, run the included synthetic data generator:
-
-```bash
-python synthetic_data.py --out_dir data/ --n_locations 4 --n_samples 2000
-```
-
-This creates CSV(s) in `data/` with a `timestamp` column and placeholder feature/target names compatible with `Model.py`.
-
----
 
 ### 3. Train the example model (`Model.py`)
 
@@ -125,8 +107,7 @@ Timestamps correspond to the last timestamp of each input sequence (i.e., the ti
 If you use STF-TELMo or this code in published work, please cite the associated paper:
 
 ```
-[Your citation here]
-Author(s). "STF-TELMo: <paper title>". <Journal/Conference>, YEAR.
+xxxx
 ```
 
 This example is released under the **MIT License**. See `LICENSE` for details.
